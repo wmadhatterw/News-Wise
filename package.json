@@ -1,0 +1,20 @@
+{
+  "name": "news-wise",
+  "version": "1.0.0",
+  "description": "News-Wise",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmadhatterw/News-Wise.git"
+  },
+  "author": "SDW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmadhatterw/News-Wise/issues"
+  },
+  "homepage": "https://github.com/wmadhatterw/News-Wise#readme"
+}
