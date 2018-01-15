@@ -2,25 +2,76 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>CMS - Express</title>
-	<!-- Latest compiled and minified CSS & JS -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <title>CMS - Express</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
 </head>
 
-<body>
-	<div class="container">
-		<div class="row top-30">
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-default" href="/blog">Go to Blog</a>
+  <body>
+
+<!-- Left Side of Navbar -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./home.html">News Wise</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./home.html">Home</a></li>
+
+            <li><a href="#recent">Recent</a></li>
+            <li><a href="#popular">Popular</a></li>
+            <li><a href="#witness">Witness</a></li>
+            <li><a href="#fake">Fake</a></li>
+
+<!-- End of Left Side -->
+
+<!-- Dropdown -->
+
+<!--             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li> -->
+          </ul>
+<!-- End of Dropdown -->
+
+<!-- Right Side of Navbar -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href=" ">Authors</a></li>
+            <li><a href="./new-post.html">Create Post</a></li>
+
+            <li class="active"><a href="./login.html">Log off</a></li>
+          </ul>
+<!-- End of Right Side -->
+
+        </div>
       </div>
-			<div class="col-md-2 col-sm-2">
-        <a class="btn btn-default" href="/cms">New Post</a>
-      </div>
-    </div>
+    </nav>
+<!-- End of Navbar -->
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<div class="author-container">
@@ -31,8 +82,6 @@
 								<th>Name</th>
 								<th># of Posts</th>
 								<th>See Author's Posts</th>
-								<th>New Post</th>
-								<th>Delete Author</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -41,7 +90,7 @@
 									<td colspan="4">
 										<input placeholder="Enter a name" id="author-name" type="text" />
 									</td>
-									<td><button type="submit" class="btn btn-success">Create Author</button>
+									<td><button type="submit" class="btn btn-success">Search Author</button>
 									</td>
 								</form>
 							</tr>
