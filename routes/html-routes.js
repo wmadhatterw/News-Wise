@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 
   app.get("/create-user", function(req, res) {
@@ -44,6 +44,10 @@ module.exports = function(app) {
   });
   app.get("/witness", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/witness.html"));
+  });
+
+  app.get("/new-post", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/new-post.html"));
   });
 
 
