@@ -14,12 +14,16 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
+  app.get("/create-user", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/create-user.html"));
+  });  
+
   // cms route loads cms.html
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
+  app.get("/home", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 
   // blog route loads blog.html
@@ -31,5 +35,16 @@ module.exports = function(app) {
   app.get("/authors", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/author-manager.html"));
   });
+
+  app.get("/fake", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/fake.html"));
+  });
+  app.get("/popular", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/popular.html"));
+  });
+  app.get("/witness", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/witness.html"));
+  });
+
 
 };
