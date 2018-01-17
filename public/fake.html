@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>CMS - Express</title>
-  <!-- Latest compiled and minified CSS & JS -->
+	<meta charset="UTF-8">
+	<title>CMS - Express</title>
+	<!-- Latest compiled and minified CSS & JS -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -13,7 +13,7 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+	<link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
 </head>
 
   <body>
@@ -38,7 +38,7 @@
             <li><a href="#recent">Recent</a></li>
             <li><a href="/popular">Popular</a></li>
             <li><a href="/witness">Witness</a></li>
-            <li><a href="/fake">Fake</a></li>
+            <li class="active"><a href="/fake">Fake</a></li>
 
 <!-- End of Left Side -->
 
@@ -61,7 +61,7 @@
 
 <!-- Right Side of Navbar -->
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="/authors">Authors</a></li>
+            <li><a href="/authors">Authors</a></li>
             <li><a href="/new-post">Create Post</a></li>
 
             <li><a href="/">Log off</a></li>
@@ -72,38 +72,3 @@
       </div>
     </nav>
 <!-- End of Navbar -->
-
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="author-container">
-					<h1>Authors</h1>
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th># of Posts</th>
-								<th>See Author's Posts</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr id="form-row">
-								<form id="author-form">
-									<td colspan="4">
-										<input placeholder="Enter a name" id="author-name" type="text" />
-									</td>
-									<td><button type="submit" class="btn btn-success">Search Author</button>
-									</td>
-								</form>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-		</d>
-		<!-- Custom Script -->
-		<script src="js/author.js" type="text/javascript"></script>
-
-</body>
-
-</html>
