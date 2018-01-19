@@ -1,3 +1,7 @@
+body {
+  background-color: #eee;
+}
+
 button.submit {
   float: right;
 }
@@ -49,4 +53,20 @@ button.edit {
 .home {
   min-height: 2000px;
   padding-top: 70px;
+}
+
+.navbar-inverse {
+  background-color: #00ced1;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #ffffff; 
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #ffffff;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: #ffffff;
 }
