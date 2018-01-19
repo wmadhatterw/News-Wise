@@ -120,7 +120,7 @@ $(document).ready(function() {
       .parent()
       .parent()
       .data("post");
-    window.location.href = "/fake?post_id=" + currentPost.id;
+    window.location.href = "/new-post?post_id=" + currentPost.id;
   }
 
   // This function displays a messgae when there are no posts
