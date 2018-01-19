@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>CMS - Express</title>
+	<title>News Wise</title>
 	<!-- Latest compiled and minified CSS & JS -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,6 +14,8 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <link href="./css/signin.css" rel="stylesheet">
+
 </head>
 
   <body>
@@ -29,11 +31,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/home">News Wise</a>
+          <a class="navbar-brand" href="/">News Wise</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/home">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
 
             <li><a href="/recent">Recent</a></li>
             <li><a href="/popular">Popular</a></li>
@@ -46,7 +48,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/authors">Authors</a></li>
             <li><a href="/new-post">Create Post</a></li>
-
+            <li><a href="/sign-up">Sign-up</a></li>
             <li><a href="/">Log off</a></li>
           </ul>
 <!-- End of Right Side -->
@@ -64,6 +66,19 @@
         <p>News Wise is a site where you can read about any type of news. You can also create your own news, but if it fake it will get down voted by the other users and get put into the fake category. If it's not then people with up vote it. When they up vote it you will gain points. Also you can gain points by commenting on others posts and if it thorough enough and enough votes you'll earn more. The more you earn the more you are trusted by other users.</p>
         </p>
       </div>
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="center-block">
+          <p>
+            <button class="btn btn-lg btn-block btn-primary" type="submit">Sign in</button>
+          </p>
+        </div>
+      </form>
 
     </div>
   </body>
