@@ -120,7 +120,7 @@ $(document).ready(function() {
       .parent()
       .parent()
       .data("post");
-    window.location.href = "/cms?post_id=" + currentPost.id;
+    window.location.href = "/fake?post_id=" + currentPost.id;
   }
 
   // This function displays a messgae when there are no posts
@@ -133,7 +133,7 @@ $(document).ready(function() {
     blogContainer.empty();
     var messageh2 = $("<h2>");
     messageh2.css({ "text-align": "center", "margin-top": "50px" });
-    messageh2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +
+    messageh2.html("No posts yet" + partial + ", navigate <a href='/authors" + query +
     "'>here</a> in order to get started.");
     blogContainer.append(messageh2);
   }
