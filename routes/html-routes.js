@@ -14,12 +14,7 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
-  });
-
-  // home route loads cms.html
-  app.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/sign-in.html"));
   });
 
   //recent route
@@ -50,5 +45,10 @@ module.exports = function(app) {
   //create post route
   app.get("/new-post", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/new-post.html"));
+  });
+
+  // sign-up route loads cms.html
+  app.get("/sign-up", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/sign-up.html"));
   });
 };
