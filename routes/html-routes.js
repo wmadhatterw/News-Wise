@@ -17,18 +17,29 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 
-  app.get("/create-user", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/create-user.html"));
-  });  
-
-  // cms route loads cms.html
+  // home route loads cms.html
   app.get("/home", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+  //recent route
+  app.get("/recent", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/recent.html"));
+  });
+
+  //popular route
+  app.get("/popular", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/popular.html"));
+  });
+
+  //witness route
+  app.get("/witness", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/witness.html"));
+  });
+
+  //fake route
+  app.get("/fake", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/fake.html"));
   });
 
   // authors route loads author-manager.html
@@ -36,19 +47,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/author-manager.html"));
   });
 
-  app.get("/fake", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/fake.html"));
-  });
-  app.get("/popular", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/popular.html"));
-  });
-  app.get("/witness", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/witness.html"));
-  });
-
+  //create post route
   app.get("/new-post", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/new-post.html"));
   });
-
-
 };
