@@ -19,8 +19,15 @@ var PORT = process.env.PORT || 8080;
 // Requiring our models for syncing
 var db = require("./models");
 
+//Models
+var models = require("./models");
+
 //Routes var
 var authRoute = require('./routes/auth.js')(app);
+
+//load passport strategies
+ 
+require('./config/passport/passport.js')(passport, models.user);
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
