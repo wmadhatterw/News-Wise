@@ -70,3 +70,8 @@ button.edit {
 .table-striped>tbody>tr:nth-of-type(odd) {
   background-color: #ffffff;
 }
+
+.News-Wise {
+  background-color: #00ced1;
+  padding: 20px 0;
+}
