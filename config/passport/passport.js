@@ -36,7 +36,7 @@ module.exports = function(passport, user) {
 	});
 
 
- 
+ //local signup
  
     passport.use('local-signup', new LocalStrategy(
  
@@ -119,7 +119,7 @@ module.exports = function(passport, user) {
  
     ));
 
-    	
+
 //LOCAL SIGNIN
 passport.use('local-signin', new LocalStrategy(
  
