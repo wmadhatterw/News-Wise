@@ -24,7 +24,10 @@ app.use(passport.session()); // persistent login sessions
 // view engine setup
 app.engine('hbs', exphbs({extname: '.hbs', defaultLayout: 'layout'}));
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'hbs');// possibly .hbs not sure
+
+//Routes
+var authRoute = require('./routes/auth.js')(app);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
