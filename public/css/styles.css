@@ -56,7 +56,7 @@ button.edit {
 }
 
 .navbar-inverse {
-  background-color: #00ced1;
+  background-color: #3cb371;
 }
 
 .navbar-inverse .navbar-brand {
@@ -71,7 +71,8 @@ button.edit {
   background-color: #ffffff;
 }
 
-.News-Wise {
-  background-color: #00ced1;
+.footer {
+  background-color: #3cb371;
   padding: 20px 0;
+  font-size: 18px;
 }
