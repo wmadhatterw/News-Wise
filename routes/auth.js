@@ -4,10 +4,14 @@ module.exports = function(app, passport) {
  
     app.get('/signup', authController.signup);
     app.get('/signin', authController.signin);
-    app.get('/dashboard', isLoggedIn, authController.dashboard);
+    app.get('/NYT', isLoggedIn, authController.NYT);
+
+
+    app.get('/author', isLoggedIn, authController.author);
+    app.get('/new-post', isLoggedIn, authController.newpost);
 
     app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect: '/dashboard',
+        successRedirect: '/NYT',
  
         failureRedirect: '/signup'
     }
@@ -17,7 +21,7 @@ module.exports = function(app, passport) {
 	app.get('/logout',authController.logout);
 
 	app.post('/signin', passport.authenticate('local-signin', {
-        successRedirect: '/dashboard',
+        successRedirect: '/NYT',
  
         failureRedirect: '/signin'
     }

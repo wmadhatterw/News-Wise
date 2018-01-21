@@ -12,11 +12,23 @@ exports.signin = function(req, res) {
  
 }
 
-exports.dashboard = function(req, res) {
+exports.NYT = function(req, res) {
  
-    res.render('dashboard');
+    res.render('NYT');
  
 }
+
+exports.author = function(req, res) {
+ 
+    res.render('author-manager');
+ 
+}
+exports.newpost = function(req, res) {
+ 
+    res.render('new-post');
+ 
+}
+
 exports.logout = function(req, res) {
  
     req.session.destroy(function(err) {
