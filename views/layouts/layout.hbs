@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <!-- Bootswatch Styling for Improving the Aesthetics -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- Style to fix the issue of text extending past panel length -->
+
+  <style>
+    .panel-body a {
+      word-break: break-all;
+    }
+  </style>
+
+</head>
+
   <body>
     {{{body}}}
   </body>
