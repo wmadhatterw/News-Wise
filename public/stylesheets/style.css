@@ -76,6 +76,9 @@ button.edit {
 .table-striped>tbody>tr:nth-of-type(odd) {
   background-color: #ffffff;
 }
+.white {
+	background-color: white;
+}
 
 .footer {
   color: white;
