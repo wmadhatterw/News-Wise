@@ -1,13 +1,76 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>test</title>
+<meta charset="UTF-8">
+
+<title>test</title>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="test.js"></script>
+	<!-- <link href="/css/livepreview-demo.css" rel="stylesheet" type="text/css"> -->
 	<link rel='stylesheet' href='test.css' />
 </head>
-<body>
 
-Link previews for <a href="http://en.wikipedia.org/">Wikipedia</a><div class="box"><iframe src="http://en.wikipedia.org/" width = "1000px" height = "500px"></iframe></div>, <a href="https://www.npr.org/">NPR</a><div class="box"><iframe src="https://www.npr.org/" width = "1000px" height = "1000px"></iframe></div>, and 
-Link previews for <a href="https://www.nytimes.com/?action=click&pgtype=Homepage&module=MastheadLogo&region=TopBar">NYT</a><div class="box"><iframe src="https://www.nytimes.com/?action=click&pgtype=Homepage&module=MastheadLogo&region=TopBar" width = "1000px" height = "1000px"></iframe></div> will appear when these links are moused over.
+	
+<body>
+	
+
+
+<!-- language: lang-html -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <textarea class="form-control" placeholder="" id="url" name="user_status">google.com</textarea>     
+    <div id="show_lnk"></div>
+
+<!-- end snippet -->
+
+
+
+
+
 </body>
 </html>
+
+
+
+<!-- begin snippet: js hide: false console: true babel: false -->
+
+<!-- language: lang-js -->
+
+  <!--   $(document).ready(function() {
+      $("textarea[name*='user_status']").blur(function () {
+        var target = $(this).val();
+        $.ajax({
+          url: "https://api.linkpreview.net",
+          dataType: 'jsonp',
+          data: {q: target, key: '5a66300c212e8244e6b76cb404f1e057b6417e1c7eab5'},
+          success: function (response) {
+            $("#show_lnk").html('<img src="'+response.image+'"><h3>'+response.title+'</h3><h4>'+response.description+'</h4><a href="'+response.url+'">'+response.url+'</a>');
+          }
+        }); -->
+   <!--    });
+    }); -->
+
+<!-- language: lang-css -->
+<!-- 
+    body {
+        padding: 25px;
+    }
+
+    #show_lnk img {
+      width:30px;
+      height:30px;
+    }
+ -->
+<!-- language: lang-html -->
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <textarea class="form-control" placeholder="" id="url" name="user_status">google.com</textarea>     
+    <div id="show_lnk"></div>
+ -->
+<!-- end snippet -->
+
+
+

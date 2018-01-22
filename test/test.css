@@ -1,10 +1,9 @@
-.box{
-    display: none;
-    width: 100%;
-}
 
-a:hover + .box,.box:hover{
-    display: block;
-    position: relative;
-    z-index: 100;
-}
+    body {
+        padding: 25px;
+    }
+
+    #show_lnk img {
+      width:30px;
+      height:30px;
+    }
