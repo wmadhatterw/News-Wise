@@ -1,4 +1,39 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{title}}</title>
+    <!-- Bootstrap core CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Custom styles for this template -->
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- Style to fix the issue of text extending past panel length -->
+
+  <style>
+    .panel-body a {
+      word-break: break-all;
+    }
+  </style>
+<link rel="icon" type="image/x-icon" href="/favicon/favicon1.ico">
+</head>
+
+{{!-- ================================= --}}
+{{!-- 
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -26,9 +61,62 @@
     }
   </style>
 
-</head>
+</head> --}}
 
   <body>
-    {{{body}}}
-  </body>
+
+
+<!-- Left Side of Navbar -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">News Wise</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/NYT">Home</a></li>
+
+            <li><a href="/NYT">Recent</a></li>
+            <li><a href="/popular">Popular</a></li>
+            <li><a href="/witness">Witness</a></li>
+            <li><a href="/fake">Fake</a></li>
+          </ul>
+
+<!-- End of Left Side -->
+
+<!-- Right Side of Navbar -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/author">Authors</a></li>
+            <li><a href="/new-post">Create Post</a></li>
+            <li><a href="/signup">Create New Account</a></li>
+            <li><a href="/logout">Log off</a></li>
+          </ul>
+<!-- End of Right Side -->
+
+        </div>
+      </div>
+    </nav>
+<!-- End of Navbar -->
+<br>
+
+  {{{ body }}}
+
+<br>
+<br>
+  <footer class="footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <span class="grey-text text-lighten-4">© 2018 <a class="grey-text text-lighten-4 right" href="https://github.com/Cole-Mertz">Cole Mertz  </a><a class="grey-text text-lighten-4 right" href="https://github.com/kmbecker">Kyle Becker </a><a class="grey-text text-lighten-4 right" href="https://github.com/wmadhatterw">Seth Walton  </a><a class="grey-text text-lighten-4 right" href="https://github.com/Zbmiller">Zach Miller </a></span>
+        <a class="reference grey-text text-lighten-4 right" href="https://github.com/wmadhatterw/News-Wise">Github Repo</a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
