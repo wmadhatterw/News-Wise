@@ -1,14 +1,94 @@
 body {
-
 	background: url('https://1x5xwy14hylj3ylgel358cb1-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/THUMBNAIL_BG_01.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: orange;
+button.submit {
+  float: right;
 }
+
+form#cms {
+  margin-top: 100px;
+}
+
+#cms textarea {
+  resize: none;
+}
+
+.panel-heading button.delete,
+button.edit {
+  float: right;
+  margin: 5px;
+}
+
+.author-container {
+  margin-top: 100px;
+}
+
+.author-list {
+  margin-top: 25px;
+}
+
+.blog-container {
+  margin-top: 50px;
+}
+
+.blog {
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+#author-name {
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.top-30 {
+  margin-top: 30px;
+}
+
+.home {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+.navbar-inverse {
+  background-color: #3cb371;
+}
+
+.navbar-inverse .navbar-brand {
+  color: black; 
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: black;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+.footer {
+  color: white;
+  background-color: #3cb371;
+  padding: 20px 0;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
