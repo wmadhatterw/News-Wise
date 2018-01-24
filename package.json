@@ -1,33 +1,27 @@
 {
   "name": "news-wise",
-  "version": "1.0.0",
-  "description": "News thats wise (Ku-Coding BootCamp Project 2)",
-  "main": "server.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wmadhatterw/News-Wise.git"
-  },
-  "author": "sdw",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wmadhatterw/News-Wise/issues"
-  },
-  "homepage": "https://github.com/wmadhatterw/News-Wise#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
-    "mysql": "^2.15.0",
+    "handlebars": "^4.0.11",
+    "hbs": "~4.0.1",
+    "morgan": "~1.9.0",
     "mysql2": "^1.5.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "sequelize": "^4.31.2"
+    "sequelize": "^4.31.2",
+    "serve-favicon": "~2.4.5",
+    "webhoseio": "^1.0.2"
   }
 }

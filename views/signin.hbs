@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
-</head>
- 
-<body>
-    <form id="signin" name="signin" method="post" action="signin">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign In" />
+	<div class="jumbotron">
+      <h1>Welcome to News Wise</h1>
+        <p>News Wise is a site where you can read about any type of news. You can also create your own news, but if it's fake it will get down voted by the other users and get put into a fake category. If it's not then people will up vote it. When they up vote it you will gain points. Also you can gain points by commenting on others posts and if it's thorough enough and gets enough votes you'll earn more. The more you earn the more you are trusted by other users. Enjoy!</p>
+        </p>
+     </div>
+
+	<form class ="for-signin" id="signin" name="signin" method="post" action="signin">
+		<h2 class="form-signin-heading white">Please sign in</h2>
+        <label for="email" class ="sr-only">Email Address</label>
+        <input class="text form-control" name="email" type="email" placeholder="johndoe@example.com"/>
+        <label for="password" class = "sr-only">Password</label>
+        <input name="password" type="password" class = "form-control" placeholder="Password"/>
+
+		<div class="center-block">
+          <p>
+            <input class="btn btn-lg btn-block btn-primary" type="submit" value="Sign In" />
+          </p>
+        </div>
     </form>
- 
-</body>
- 
-</html>

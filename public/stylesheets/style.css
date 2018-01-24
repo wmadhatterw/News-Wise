@@ -1,5 +1,11 @@
 body {
-  background-color: #eee;
+	background: url('https://1x5xwy14hylj3ylgel358cb1-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/THUMBNAIL_BG_01.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 button.submit {
@@ -60,19 +66,39 @@ button.edit {
 }
 
 .navbar-inverse .navbar-brand {
-  color: #ffffff; 
+  color: black; 
 }
 
 .navbar-inverse .navbar-nav>li>a {
-  color: #ffffff;
+  color: black;
 }
 
 .table-striped>tbody>tr:nth-of-type(odd) {
   background-color: #ffffff;
 }
+.white {
+	background-color: white;
+}
 
 .footer {
+<<<<<<< HEAD:public/css/styles.css
+=======
+  position: fixed;
+  bottom : 0;
+  width: 100%;
+  height: 60px;
+  color: white;
+>>>>>>> sdw2:public/stylesheets/style.css
   background-color: #3cb371;
   padding: 20px 0;
   font-size: 18px;
 }
+
+
+
+
+
+
+
+
+
