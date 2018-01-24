@@ -71,11 +71,11 @@ button.edit {
 }
 
 .navbar-inverse .navbar-brand {
-  color: black; 
+  color: #d9d9d9; 
 }
 
 .navbar-inverse .navbar-nav>li>a {
-  color: black;
+  color: #d9d9d9;
 }
 
 .table-striped>tbody>tr:nth-of-type(odd) {
@@ -142,6 +142,12 @@ button.edit {
 }
 .title {
   text-align: center;
+}
+
+.form-sign-up {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 
