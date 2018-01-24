@@ -1,0 +1,22 @@
+<h1>Recent News</h1>
+
+<h2>Some shit below<h2>
+
+<ol>
+  {{#each articles}}
+  	<li>
+  		<h3>{{title}}</h3>
+  		<h4>{{author}}</h4>
+  		<h4>{{site}}</h4>
+  		<p>{{text}}</p>
+  		<button class="pushToPop" 
+  			{{!-- onclick="handleRecentButtonClick()" --}}
+  			data-title="{{title}}"  
+  			data-author="{{author}}" 
+  			data-id="{{id}}" 
+  			type="button">
+			{{#if alreadyintable}}Already Up For Vote{{else}}Send to Popular{{/if}}
+		</button>
+  	</li>
+  {{/each}}
+</ol>

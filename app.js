@@ -36,6 +36,11 @@
 
     //Routes
     var authRoute = require('./routes/auth.js')(app,passport);
+    // var recentNews = require('./routes/news.js');
+    // var popular = require('./routes/popular.js');
+
+    // app.use('/recentnews', recentNews);
+    // app.use('/popular', popular);
 
 
     //load passport strategies

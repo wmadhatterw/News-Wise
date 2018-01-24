@@ -1,0 +1,25 @@
+<h1>Popular Articles</h1>
+
+<h2>Listed below<h2>
+
+<ol>
+  {{#each articles}}
+    <li>
+        <h3>{{title}}</h3>
+        <h4>{{author}}</h4>
+        <h4>{{site}}</h4>
+        <p>{{url}}</p>
+        <p>{{popular}}</p>
+        <button class="upVote" 
+            data-id="{{id}}" 
+            type="button">
+            Up Vote
+        </button>
+        <button class="downVote"
+            data-id="{{id}}"
+            type="button">
+            Down Vote
+        </button>
+    </li>
+  {{/each}}
+</ol>

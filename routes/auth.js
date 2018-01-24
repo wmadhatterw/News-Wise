@@ -1,17 +1,18 @@
 var authController = require('../controllers/authcontroller.js');
  
 module.exports = function(app, passport) {
-    app.get('/', isLoggedIn, authController.NYT);
+    app.get('/', isLoggedIn, authController.recent);
     app.get('/signup', authController.signup);
     app.get('/signin', authController.signin);
-    app.get('/NYT', isLoggedIn, authController.NYT);
-
+    
+    app.get('/recent', isLoggedIn, authController.recent);
+    app.get('/popular', isLoggedIn, authController.popular);
 
     app.get('/author', isLoggedIn, authController.author);
     app.get('/new-post', isLoggedIn, authController.newpost);
 
     app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect: '/NYT',
+        successRedirect: '/recent',
  
         failureRedirect: '/signup'
     }
@@ -21,7 +22,7 @@ module.exports = function(app, passport) {
 	app.get('/logout',authController.logout);
 
 	app.post('/signin', passport.authenticate('local-signin', {
-        successRedirect: '/NYT',
+        successRedirect: '/recent',
  
         failureRedirect: '/signin'
     }

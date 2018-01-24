@@ -12,10 +12,15 @@ exports.signin = function(req, res) {
  
 }
 
-exports.NYT = function(req, res) {
+exports.recent = function(req, res) {
  
-    res.render('NYT');
+    res.render('recent');
  
+}
+
+exports.popular = function(req, res) {
+
+	res.render('popular');
 }
 
 exports.author = function(req, res) {
