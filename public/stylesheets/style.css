@@ -81,6 +81,10 @@ button.edit {
 }
 
 .footer {
+  position: fixed;
+  bottom : 0;
+  width: 100%;
+  height: 60px;
   color: white;
   background-color: #3cb371;
   padding: 20px 0;
