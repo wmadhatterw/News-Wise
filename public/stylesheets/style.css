@@ -13,14 +13,6 @@ body {
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-button.submit {
-  float: right;
-}
-
-form#cms {
-  margin-top: 100px;
-}
-
 #cms textarea {
   resize: none;
 }
@@ -159,4 +151,10 @@ margin-top: 5px;
 .jumbotron {
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.new-post-link {
+  padding-top: 5px;
 }
