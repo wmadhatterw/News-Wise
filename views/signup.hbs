@@ -1,14 +1,15 @@
 <div class="container">
     <div class="jumbotron">
-    <form class="form-sign-up" id="signup" name="signup" method="post" action="/signup">
-        <label class="form-signin-heading" for="email">Email Address</label>
-        <input class="text form-control" name="email" type="email" />
-        <label class="form-signin-heading" for="firstname">Firstname</label>
-        <input class="form-control" name="firstname" type="text" />
-        <label class="form-signin-heading" for="lastname">Lastname</label>
-        <input class="form-control" name="lastname" type="text" />
-        <label class="form-signin-heading" for="password">Password</label>
-        <input class="form-control" name="password" type="password" />
+    <h1 class="title">Create a New Account</h1>
+    <form id="signup" name="signup" method="post" action="/signup">
+        <label class="signup-label form-signin-heading" for="email">Email Address:</label>
+        <input class="signup-input text form-control" name="email" type="email" />
+        <label class="signup-label form-signin-heading" for="firstname">Firstname:</label>
+        <input class="signup-input form-control" name="firstname" type="text" />
+        <label class="signup-label form-signin-heading" for="lastname">Lastname:</label>
+        <input class="signup-input form-control" name="lastname" type="text" />
+        <label class="signup-label form-signin-heading" for="password">Password:</label>
+        <input class="signup-password form-control" name="password" type="password" />
         <input class="btn btn-lg btn-block btn-primary" type="submit" value="Sign Up" />
     </form>
     </div>
