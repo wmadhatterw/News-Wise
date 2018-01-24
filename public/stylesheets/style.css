@@ -1,10 +1,15 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
 	background: url('https://1x5xwy14hylj3ylgel358cb1-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/THUMBNAIL_BG_01.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding: 50px;
+  margin-bottom: 60px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -62,7 +67,7 @@ button.edit {
 }
 
 .navbar-inverse {
-  background-color: #3cb371;
+  background-color: #008fb3;
 }
 
 .navbar-inverse .navbar-brand {
@@ -81,19 +86,63 @@ button.edit {
 }
 
 .footer {
-<<<<<<< HEAD:public/css/styles.css
-=======
-  position: fixed;
+  /*float: left;*/
+  position: absolute;
   bottom : 0;
   width: 100%;
   height: 60px;
   color: white;
->>>>>>> sdw2:public/stylesheets/style.css
-  background-color: #3cb371;
+  background-color: #cc0000;
   padding: 20px 0;
   font-size: 18px;
 }
+.wrapper {
+  padding: 50px;
+}
+.a {
+  color: #ffffff;
+}
 
+.for-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.for-signin .form-signin-heading,
+.for-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin-heading{
+  text-align: center;
+}
+.for-signin .checkbox {
+  font-weight: normal;
+}
+.for-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.for-signin .form-control:focus {
+  z-index: 2;
+}
+.for-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.for-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.title {
+  text-align: center;
+}
 
 
 
