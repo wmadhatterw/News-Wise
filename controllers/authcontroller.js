@@ -28,8 +28,11 @@ exports.recent = function(req, res) {
 }
 
 exports.popular = function(req, res) {
-
-	res.render('popular');
+db.Article.findAll().then(function(data){
+ 		res.render('popular', {articles: data});
+ 	}).catch(function(error){
+ 		console.log(error);
+ 	});
 }
 
 exports.author = function(req, res) {
