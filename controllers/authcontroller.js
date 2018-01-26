@@ -1,3 +1,5 @@
+var db = require("../models");
+
 var exports = module.exports = {}
  
 exports.signup = function(req, res) {
@@ -13,8 +15,15 @@ exports.signin = function(req, res) {
 }
 
 exports.recent = function(req, res) {
- 
-    res.render('recent');
+ 	db.Article.findAll().then(function(data){
+ 		res.render('recent', {articles: data});
+ 	}).catch(function(error){
+ 		console.log(error);
+ 	});
+    // console.log(data);
+    // console.log("hitting page route===================");
+   
+    
  
 }
 

@@ -58,5 +58,5 @@ function storeArticles(articles) {
 
 setInterval(function() {
     getArticles();
-}, 60000 )
+}, 10000 )
 //
