@@ -6,11 +6,11 @@
 
 <ol>
   {{#each articles}}
-  	<li>
-  		<h3>{{title}}</h3>
-  		<h4>{{author}}</h4>
-  		<h4>{{site}}</h4>
-  		<p>{{text}}</p>
+  	<li class="list">
+  		<h3 class="recentTitle">{{title}}</h3>
+  		<h4 class="recentAuthor">{{author}}</h4>
+  		<h4 class="recentSite">{{site}}</h4>
+  	<div class="scroll"><p>{{text}}</p></div>
   		<button class="pushToPop btn btn-lg btn-block btn-primary" 
   			{{!-- onclick="handleRecentButtonClick()" --}}
   			data-title="{{title}}"  

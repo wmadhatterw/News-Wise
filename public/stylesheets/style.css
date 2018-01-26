@@ -153,8 +153,30 @@ margin-top: 5px;
     padding-bottom: 20px;
     padding-right: 60px;
     padding-left: 60px;
+    background: rgba(238, 238, 238, 0.75);
 }
 
 .new-post-link {
   padding-top: 5px;
+}
+
+.scroll {
+  height: 250px;
+  overflow-y: auto;
+}
+
+.list {
+  font-size: 24px;
+}
+
+.recentTitle {
+  font-weight: bold;
+}
+
+.recentAuthor {
+  font-size: 20px;
+}
+
+.recentSite {
+  font-size: 18px;
 }
