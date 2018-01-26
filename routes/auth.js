@@ -9,6 +9,8 @@ module.exports = function(app, passport) {
     app.get('/popular', isLoggedIn, authController.popular);
 
     app.get('/author', isLoggedIn, authController.author);
+    app.get('/blog', isLoggedIn, authController.blog);
+    app.get('/cms', isLoggedIn, authController.cms);
     app.get('/new-post', isLoggedIn, authController.newpost);
 
     app.post('/signup', passport.authenticate('local-signup', {
