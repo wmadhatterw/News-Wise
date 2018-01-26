@@ -1,4 +1,7 @@
-<h1>Recent News</h1>
+<div class="container">
+<div class="jumbotron">
+
+<h1 class="title">Recent News</h1>
 
 <h2>Some shit below<h2>
 
@@ -9,7 +12,7 @@
   		<h4>{{author}}</h4>
   		<h4>{{site}}</h4>
   		<p>{{text}}</p>
-  		<button class="pushToPop" 
+  		<button class="pushToPop btn btn-lg btn-block btn-primary" 
   			{{!-- onclick="handleRecentButtonClick()" --}}
   			data-title="{{title}}"  
   			data-author="{{author}}" 
@@ -20,3 +23,5 @@
   	</li>
   {{/each}}
 </ol>
+</div>
+</div>
