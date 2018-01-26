@@ -1,21 +1,24 @@
-<h1>Popular Articles</h1>
+<div class="container">
+<div class="jumbotron">
+
+<h1 class="title">Popular Articles</h1>
 
 <h2>Listed below<h2>
 
 <ol>
   {{#each articles}}
-    <li>
-        <h3>{{title}}</h3>
+    <li class="">
+        <h3><a href="{{url}}" target="_blank">{{title}}</a></h3>
         <h4>{{author}}</h4>
         <h4>{{site}}</h4>
-        <p>{{url}}</p>
-        <p>{{popular}}</p>
-        <button class="upVote" 
+{{!--         <p>{{url}}</p>
+ --}}        <p>{{popular}}</p>
+        <button class="upVote btn btn-lg btn-primary" 
             data-id="{{id}}" 
             type="button">
             Up Vote
         </button>
-        <button class="downVote"
+        <button class="downVote btn btn-lg btn-primary"
             data-id="{{id}}"
             type="button">
             Down Vote
@@ -23,3 +26,6 @@
     </li>
   {{/each}}
 </ol>
+
+</div>
+</div>
