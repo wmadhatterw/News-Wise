@@ -1,40 +1,25 @@
 $(document).ready(function() {
   /* global moment */
-
   // blogContainer holds all of our posts
   var blogContainer = $(".blog-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handlePostDelete);
   $(document).on("click", "button.edit", handlePostEdit);
-  // Variable to hold our posts
+  postCategorySelect.on("change", handleCategoryChange);
   var posts;
 
-  // The code below handles the case where we want to get blog posts for a specific author
-  // Looks for a query param in the url for author_id
-  var url = window.location.search;
-  var authorId;
-  if (url.indexOf("?author_id=") !== -1) {
-    authorId = url.split("=")[1];
-    getPosts(authorId);
-  }
-  // If there's no authorId we just get all posts as usual
-  else {
-    getPosts();
-  }
-
-
   // This function grabs posts from the database and updates the view
-  function getPosts(author) {
-    authorId = author || "";
-    if (authorId) {
-      authorId = "/?author_id=" + authorId;
+  function getPosts(category) {
+    var categoryString = category || "";
+    if (categoryString) {
+      categoryString = "/category/" + categoryString;
     }
-    $.get("/api/posts" + authorId, function(data) {
+    $.get("/api/posts" + categoryString, function(data) {
       console.log("Posts", data);
       posts = data;
       if (!posts || !posts.length) {
-        displayEmpty(author);
+        displayEmpty();
       }
       else {
         initializeRows();
@@ -53,7 +38,10 @@ $(document).ready(function() {
     });
   }
 
-  // InitializeRows handles appending all of our constructed post HTML inside blogContainer
+  // Getting the initial list of posts
+  getPosts();
+  // InitializeRows handles appending all of our constructed post HTML inside
+  // blogContainer
   function initializeRows() {
     blogContainer.empty();
     var postsToAdd = [];
@@ -65,8 +53,6 @@ $(document).ready(function() {
 
   // This function constructs a post's HTML
   function createNewRow(post) {
-    var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     var newPostPanel = $("<div>");
     newPostPanel.addClass("panel panel-default");
     var newPostPanelHeading = $("<div>");
@@ -76,28 +62,30 @@ $(document).ready(function() {
     deleteBtn.addClass("delete btn btn-danger");
     var editBtn = $("<button>");
     editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-info");
+    editBtn.addClass("edit btn btn-default");
     var newPostTitle = $("<h2>");
     var newPostDate = $("<small>");
-    var newPostAuthor = $("<h5>");
-    newPostAuthor.text("Written by: " + post.Author.name);
-    newPostAuthor.css({
+    var newPostCategory = $("<h5>");
+    newPostCategory.text(post.category);
+    newPostCategory.css({
       float: "right",
-      color: "blue",
+      "font-weight": "700",
       "margin-top":
-      "-10px"
+      "-15px"
     });
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
     var newPostBody = $("<p>");
     newPostTitle.text(post.title + " ");
     newPostBody.text(post.body);
+    var formattedDate = new Date(post.createdAt);
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
     newPostTitle.append(newPostDate);
     newPostPanelHeading.append(deleteBtn);
     newPostPanelHeading.append(editBtn);
     newPostPanelHeading.append(newPostTitle);
-    newPostPanelHeading.append(newPostAuthor);
+    newPostPanelHeading.append(newPostCategory);
     newPostPanelBody.append(newPostBody);
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
@@ -105,7 +93,8 @@ $(document).ready(function() {
     return newPostPanel;
   }
 
-  // This function figures out which post we want to delete and then calls deletePost
+  // This function figures out which post we want to delete and then calls
+  // deletePost
   function handlePostDelete() {
     var currentPost = $(this)
       .parent()
@@ -114,28 +103,29 @@ $(document).ready(function() {
     deletePost(currentPost.id);
   }
 
-  // This function figures out which post we want to edit and takes it to the appropriate url
+  // This function figures out which post we want to edit and takes it to the
+  // Appropriate url
   function handlePostEdit() {
     var currentPost = $(this)
       .parent()
       .parent()
       .data("post");
-    window.location.href = "/new-post?post_id=" + currentPost.id;
+    window.location.href = "/cms?post_id=" + currentPost.id;
   }
 
   // This function displays a messgae when there are no posts
-  function displayEmpty(id) {
-    var query = window.location.search;
-    var partial = "";
-    if (id) {
-      partial = " for Author #" + id;
-    }
+  function displayEmpty() {
     blogContainer.empty();
     var messageh2 = $("<h2>");
     messageh2.css({ "text-align": "center", "margin-top": "50px" });
-    messageh2.html("No posts yet" + partial + ", navigate <a href='/authors" + query +
-    "'>here</a> in order to get started.");
+    messageh2.html("No posts yet for this category, navigate <a href='/new-post'>here</a> in order to create a new post.");
     blogContainer.append(messageh2);
+  }
+
+  // This function handles reloading new posts when the category changes
+  function handleCategoryChange() {
+    var newPostCategory = $(this).val();
+    getPosts(newPostCategory);
   }
 
 });

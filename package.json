@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -23,5 +23,14 @@
     "sequelize": "^4.31.2",
     "serve-favicon": "~2.4.5",
     "webhoseio": "^1.0.2"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.9.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-safari-launcher": "^1.0.0"
   }
 }

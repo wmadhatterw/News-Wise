@@ -40,6 +40,19 @@ exports.author = function(req, res) {
     res.render('author-manager');
  
 }
+
+exports.blog = function(reg, res) {
+
+    res.render('blog');
+
+}
+
+exports.cms = function(reg, res) {
+
+    res.render('cms');
+
+}
+
 exports.newpost = function(req, res) {
  
     res.render('new-post');
