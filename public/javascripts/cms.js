@@ -11,7 +11,7 @@ $(document).ready(function() {
   }
 
   var bodyInput = $("#body");
-  var linkInput = $("#link")
+  var linkInput = $("#link");
   var titleInput = $("#title");
   var cmsForm = $("#cms");
   var postCategorySelect = $("#category");
