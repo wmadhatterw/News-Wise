@@ -66,6 +66,8 @@ $(document).ready(function() {
     var newPostTitle = $("<h2>");
     var newPostDate = $("<small>");
     var newPostCategory = $("<h5>");
+    var url = post.site
+    var newPostLink = $("<h5>");
     newPostCategory.text(post.category);
     newPostCategory.css({
       float: "right",
@@ -73,10 +75,14 @@ $(document).ready(function() {
       "margin-top":
       "-15px"
     });
+    
+    var url = post.site;
+    var htmlURL = "<a href=' https://"+ url + "' target='_blank'> "+ url +"</a>"
+    
     var newPostPanelBody = $("<div>");
     newPostPanelBody.addClass("panel-body");
     var newPostBody = $("<p>");
-    newPostTitle.text(post.title + " ");
+    newPostTitle.text(post.title);
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
@@ -86,9 +92,14 @@ $(document).ready(function() {
     newPostPanelHeading.append(editBtn);
     newPostPanelHeading.append(newPostTitle);
     newPostPanelHeading.append(newPostCategory);
-    newPostPanelBody.append(newPostBody);
+
+    // newPostPanelBody.append(newPostBody);
+    
+    newPostPanelBody.html(post.body +"<br><br>" + htmlURL);
+
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
+
     newPostPanel.data("post", post);
     return newPostPanel;
   }
