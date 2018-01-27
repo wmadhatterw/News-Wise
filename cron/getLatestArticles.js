@@ -1,14 +1,14 @@
 const webhoseio = require('webhoseio');
 const db = require("mysql");
-const connection = db.createConnection({
-    host:"localhost",
-    user: "root",
-    password: "",
-    database: "newsdb"
-});
 
+const connection = process.env.NODE_ENV || "production";
 
-
+// const connection = db.createConnection({
+//      host:"localhost",
+//      user: "root",
+//      password: "",
+//      database: "newsdb"
+// });
 
 function getArticles () {
     const client = webhoseio.config({token: '8c650a7a-68dc-4ec8-b50c-f38a5fee6b79'});
@@ -59,4 +59,3 @@ function storeArticles(articles) {
 setInterval(function() {
     getArticles();
 }, 10000 )
-//
