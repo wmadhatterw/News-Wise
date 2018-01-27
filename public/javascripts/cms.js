@@ -11,6 +11,7 @@ $(document).ready(function() {
   }
 
   var bodyInput = $("#body");
+  var linkInput = $("#link")
   var titleInput = $("#title");
   var cmsForm = $("#cms");
   var postCategorySelect = $("#category");
@@ -29,7 +30,8 @@ $(document).ready(function() {
     var newPost = {
       title: titleInput.val().trim(),
       body: bodyInput.val().trim(),
-      category: postCategorySelect.val()
+      category: postCategorySelect.val(),
+      site: linkInput.val().trim()
     };
 
     console.log(newPost);
@@ -59,6 +61,7 @@ $(document).ready(function() {
       
         titleInput.val(data.title);
         bodyInput.val(data.body);
+        linkInput.val(data.site);
         postCategorySelect.val(data.category);
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit

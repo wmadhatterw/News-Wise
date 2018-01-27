@@ -20,10 +20,6 @@ exports.recent = function(req, res) {
  	}).catch(function(error){
  		console.log(error);
  	});
-    // console.log(data);
-    // console.log("hitting page route===================");
-   
-    
  
 }
 
