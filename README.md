@@ -1,12 +1,12 @@
 # News-Wise
 
-![npm](https://img.shields.io/npm/v/node-readme.svg) ![license](https://img.shields.io/npm/l/node-readme.svg) ![github-issues]
+![npm](https://img.shields.io/npm/v/node-readme.svg) ![license](https://img.shields.io/npm/l/node-readme.svg)
 
 Utilizing BCrypt, Passport, Sequelize, Express, and Handlebars we aimed to create a website 
- +with the explicit goal being to change up how you can consume and interact with news content.
- +By decentralizing news and repositioning the publishing power to the user, we allow editorial 
- +control of the news to shift into multiple sources hands, the quality and varacity of which
- +ever increasing as the user base grows.
+with the explicit goal being to change up how you can consume and interact with news content.
+By decentralizing news and repositioning the publishing power to the user, we allow editorial 
+control of the news to shift into multiple sources hands, the quality and varacity of which
+ever increasing as the user base grows.
 
 ![nodei.co](https://nodei.co/npm/node-readme.png?downloads=true&downloadRank=true&stars=true)
 
