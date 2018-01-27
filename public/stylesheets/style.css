@@ -153,7 +153,7 @@ margin-top: 5px;
     padding-bottom: 20px;
     padding-right: 60px;
     padding-left: 60px;
-    background: rgba(238, 238, 238, 0.75);
+    background: rgba(238, 238, 238, 0.8);
 }
 
 .new-post-link {
@@ -179,4 +179,21 @@ margin-top: 5px;
 
 .recentSite {
   font-size: 18px;
+}
+
+.panel-body {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.panel-heading {
+    background-color: rgba(0, 143, 179, 0.8);
+    border: 0px;
+}
+
+.panel {
+  border: 0px;
+}
+
+h2 small {
+  color: #d9d9d9;
 }
