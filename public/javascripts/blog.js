@@ -54,7 +54,7 @@ $(document).ready(function() {
   // This function constructs a post's HTML
   function createNewRow(post) {
     var newPostPanel = $("<div>");
-    newPostPanel.addClass("panel panel-default");
+    newPostPanel.addClass("panel");
     var newPostPanelHeading = $("<div>");
     newPostPanelHeading.addClass("panel-heading");
     var deleteBtn = $("<button>");
