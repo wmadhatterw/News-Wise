@@ -63,6 +63,7 @@ Contributions welcome; Please submit all pull requests against the master branch
 ## Author
 
 [Seth Walton](https://github.com/wmadhatterw) | [Cole Mertz](https://github.com/Cole-Mertz)
+
 [Kyle Becker](https://github.com/kmbecker) | [Zach Miller](https://github.com/Zbmiller)
 
 ## Heroku Link
