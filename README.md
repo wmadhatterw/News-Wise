@@ -1,6 +1,6 @@
 # News-Wise
 
-![npm](https://img.shields.io/npm/v/node-readme.svg) ![license](https://img.shields.io/npm/l/node-readme.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/node-readme.svg)  ![Circle CI build status](https://circleci.com/gh/revolunet/node-readme.svg?style=svg)
+![npm](https://img.shields.io/npm/v/node-readme.svg) ![license](https://img.shields.io/npm/l/node-readme.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/node-readme.svg)  
 
 Generate your JS project README.md using an ES6 template
 
@@ -18,53 +18,38 @@ Generate your JS project README.md using an ES6 template
 
 ## Usage
 
-Add a command in your package.json :
-```
-"scripts": {
-  "readme": "node ./node_modules/.bin/node-readme"
-},
-```
+use config.json.example
 
-Then run `npm run readme` to generate your README.md.
-
-## Custom Template
-
-You can copy and customize the [default README template](./src/.README.md) and add it to your project as `.README.md`.
-
-It uses the [Javascript ES6  syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings) and you can use these macros and variables :
-
-### Badges
-
- - `badge('npm')` : show npm version
- - `badge('nodei')` : show npm dashboard image
- - `badge('travis-status')` : show travis build status
- - `badge('license')` : show license type
- - `badge('github-issues')` : show # of github issues
- - `badge('github-stars')` : show # of github stars
- - `badge('github-forks')` : show # of github forks
- - `badge('circleci')` : show circleci status
- - all status from [stability-badges](https://github.com/badges/stability-badges)
-
-### Others
- - `scripts()` : list of npm scripts
- - `license()`: show license type + link
- - `dependencies()` : list of project dependencies
- - `pkg` : direct access to package.json
+## Database
+- cd to cron
+- run node getrecentarticles.js
 
 ## Scripts  
 
- - **npm run readme** : `node bin/node-readme.js`
- - **npm run build** : `babel -d dist/ src/ && cp ./src/.README.md ./dist/.README.md`
+ - **node app.js
 
 ## Dependencies
 
 Package | Version | Dev
 --- |:---:|:---:
-[es6-template-strings](https://www.npmjs.com/package/es6-template-strings) | 1.0.0 | ✖
-[es6-templates](https://www.npmjs.com/package/es6-templates) | 0.2.2 | ✖
-[oss-license-name-to-url](https://www.npmjs.com/package/oss-license-name-to-url) | 1.2.1 | ✖
-[babel](https://www.npmjs.com/package/babel) | 5.6.14 | ✔
-[babel-eslint](https://www.npmjs.com/package/babel-eslint) | 3.1.23 | ✔
+"bcrypt-nodejs": "0.0.3",
+"body-parser": "^1.18.2",
+"cookie-parser": "~1.4.3",
+"debug": "~2.6.9",
+"dotenv": "^4.0.0",
+"express": "^4.16.2",
+"express-handlebars": "^3.0.0",
+"express-session": "^1.15.6",
+"handlebars": "^4.0.11",
+"hbs": "~4.0.1",
+"morgan": "~1.9.0",
+"mysql": "^2.15.0",
+"mysql2": "^1.5.1",
+"passport": "^0.4.0",
+"passport-local": "^1.0.0",
+"sequelize": "^4.31.2",
+"serve-favicon": "~2.4.5",
+"webhoseio": "^1.0.2"
 
 
 ## Contributing
@@ -73,7 +58,11 @@ Contributions welcome; Please submit all pull requests against the master branch
 
 ## Author
 
-Julien Bouquillon <julien@bouquillon.com> http://github.com/revolunet
+[Seth Walton](https://github.com/wmadhatterw) | [Cole Mertz](https://github.com/Cole-Mertz)
+[Kyle Becker](https://github.com/kmbecker) | [Zach Miller(https://github.com/Zbmiller)
+
+## Heroku Link
+[News Wise](https://newswise.herokuapp.com/recent)
 
 ## License
 
